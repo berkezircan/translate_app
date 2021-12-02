@@ -1,5 +1,12 @@
 @import './reset';
+@import './variables';
 
 body {
-  background-color: #ddd;
+	background-color: #ddd;
+	font-family: $primary-font;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
 }
