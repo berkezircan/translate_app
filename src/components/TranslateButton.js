@@ -3,7 +3,7 @@ import React from 'react';
 const TranslateButton = () => {
 	return (
 		<button className="translate-button">
-			<i class="fas fa-microphone"></i>
+			<i className="fas fa-microphone"></i>
 		</button>
 	);
 };
