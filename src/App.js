@@ -7,7 +7,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="container">
-				<h1>Translate</h1>
+				<h1 className="display-1 title">Translate</h1>
 				<div className="translate-container">
 					<TranslatedWord />
 					<TranslateWordResult />
