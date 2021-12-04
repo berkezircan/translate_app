@@ -1,5 +1,6 @@
 @import './reset';
 @import './variables';
+@import './translate-items';
 
 body {
 	background-color: #ddd;
@@ -9,6 +10,10 @@ body {
 .container {
 	max-width: 1400px;
 	margin: 0 auto;
+}
+
+.translate-container {
+	display: flex;
 }
 
 h1 {
