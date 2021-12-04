@@ -5,13 +5,10 @@
 
 	&-item {
 		width: 400px;
-		background-color: $info-color;
-		color: $white-color;
+		background-color: $dark-color;
+		color: $light-color;
 		padding: 20px 40px;
 		margin: 30px 20px 0 0;
-		-webkit-box-shadow: 0 10px 6px -6px #777;
-		-moz-box-shadow: 0 10px 6px -6px #777;
-		box-shadow: 0 10px 6px -6px #777;
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
@@ -23,9 +20,13 @@
 		border: none;
 		padding: 5px;
 		border-radius: 10px;
-		background-color: #111;
-		color: #fff;
+		background-color: $muted-color;
+		color: $light-color;
 		cursor: pointer;
 		float: right;
+
+		&-active {
+			color: $info-color !important;
+		}
 	}
 }
