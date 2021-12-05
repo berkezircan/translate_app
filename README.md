@@ -15,7 +15,7 @@ You will also see any lint errors in the console.
 
 ## About the application
 1. You can translate text directly if you write something. ![1](https://user-images.githubusercontent.com/22801767/144762643-a90682a1-f58c-4184-8951-0b8bb242dc23.png)
-2. If you want use microphone and translate, firstly you have to allow your microphone. ![2](https://user-images.githubusercontent.com/22801767/144762729-1456ac05-d801-4367-9583-49ab9bbccf31.png)
+2. If you want use microphone and translate, firstly you have to allow your microphone.<br> ![2](https://user-images.githubusercontent.com/22801767/144762729-1456ac05-d801-4367-9583-49ab9bbccf31.png)
 3. When you talk to the microphone, it translates and application turn offs the microphone.![3](https://user-images.githubusercontent.com/22801767/144762730-63f8ec69-a4a1-4d97-86f6-b2f1a80d112c.png)
 4. If you get this error please use a vpn. Google translate api sends an error because of overload. If you use vpn problem solve![4](https://user-images.githubusercontent.com/22801767/144762732-2e1d7622-a05e-44a3-9a5e-38bf4e53d713.png)
 
