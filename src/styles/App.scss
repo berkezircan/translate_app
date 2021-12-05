@@ -1,6 +1,7 @@
 @import './reset';
 @import './variables';
 @import './translate-items';
+@import './utils.scss';
 
 body {
 	background-color: $muted-color;
@@ -16,24 +17,4 @@ body {
 .title {
 	margin-top: 20px;
 	color: $light-color;
-}
-
-.display-1 {
-	font-size: 2.5rem;
-}
-
-.display-2 {
-	font-size: 2rem;
-}
-
-.display-3 {
-	font-size: 1.5rem;
-}
-
-.display-4 {
-	font-size: 1rem;
-}
-
-.display-5 {
-	font-size: 0.5rem;
 }

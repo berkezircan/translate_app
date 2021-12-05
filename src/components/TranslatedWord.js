@@ -28,7 +28,7 @@ const TranslatedWord = ({
 		<div className="translate-area">
 			<textarea
 				placeholder="Translate Here"
-				className="translate-input translate-item"
+				className="translate-input translate-item px-1 py-2"
 				onChange={(e) => onWordChange(e)}
 				value={word}
 			/>

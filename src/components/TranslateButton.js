@@ -7,6 +7,7 @@ const TranslateButton = ({ microphoneStatus, speechHandler }) => {
 			className={`translate-button ${
 				microphoneStatus ? 'translate-button-active' : ''
 			}`}
+			title="Click here to use your microphone"
 		>
 			<i className="fas fa-microphone"></i>
 		</button>
