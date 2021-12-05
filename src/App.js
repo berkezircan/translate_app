@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import translate from 'translate';
-
 // Styles
 import './styles/App.scss';
 // Components
