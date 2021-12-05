@@ -2,16 +2,7 @@
 ### In the project directory, you have run  `npm install` first to get dependencies.
 ### Secondly you have to run `npm start` to start the application.
 
-Runs the app in the development mode.
-
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-  
-
-The page will reload if you make edits.
-
-You will also see any lint errors in the console.
-
 
 ## About the application
 1. You can translate text directly if you write something. ![1](https://user-images.githubusercontent.com/22801767/144762643-a90682a1-f58c-4184-8951-0b8bb242dc23.png)
