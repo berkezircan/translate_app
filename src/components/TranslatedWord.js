@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
+
+import debounce from 'lodash.debounce';
+
+import _ from 'lodash';
 
 import TranslateButton from './TranslateButton';
 
 const TranslatedWord = ({ word, setWord, translateWord }) => {
-	const onWordChange = (e) => {
-		setWord(e.target.value);
+	const onWordChange = (event) => {
+		debounce(event.target.value);
 	};
+
+	const debounce = useCallback(
+		_.debounce((_searchVal) => {
+			setWord(_searchVal);
+
+			translateWord(_searchVal);
+		})
+	);
 
 	return (
 		<div className="translate-area">

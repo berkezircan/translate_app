@@ -12,12 +12,12 @@ function App() {
 	const [word, setWord] = useState('');
 	const [result, setResult] = useState('');
 
-	const translateWord = async () => {
+	const translateWord = async (searchValue) => {
 		translate.engine = TRANSLATE_ENGINE;
 		translate.key = API_KEY;
 
-		if (word !== '') {
-			const response = await translate(word, TRANSLATE_LANGUAGE);
+		if (searchValue.trim() !== '') {
+			const response = await translate(searchValue, TRANSLATE_LANGUAGE);
 
 			setResult(response);
 		}
