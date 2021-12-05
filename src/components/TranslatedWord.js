@@ -4,7 +4,13 @@ import _ from 'lodash';
 
 import TranslateButton from './TranslateButton';
 
-const TranslatedWord = ({ word, setWord, translateWord }) => {
+const TranslatedWord = ({
+	word,
+	setWord,
+	translateWord,
+	microphoneStatus,
+	setMicrophoneStatus,
+}) => {
 	const onWordChange = (event) => {
 		debounce(event.target.value);
 	};
@@ -25,7 +31,10 @@ const TranslatedWord = ({ word, setWord, translateWord }) => {
 				onChange={(e) => onWordChange(e)}
 				value={word}
 			/>
-			<TranslateButton translateWord={translateWord} />
+			<TranslateButton
+				microphoneStatus={microphoneStatus}
+				setMicrophoneStatus={setMicrophoneStatus}
+			/>
 		</div>
 	);
 };

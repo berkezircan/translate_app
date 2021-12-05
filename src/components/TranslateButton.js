@@ -1,8 +1,17 @@
 import React from 'react';
 
-const TranslateButton = ({ translateWord, testFunc }) => {
+const TranslateButton = ({ microphoneStatus, setMicrophoneStatus }) => {
+	const pressToTalk = () => {
+		setMicrophoneStatus(true);
+	};
+
 	return (
-		<button onClick={() => translateWord()} className="translate-button">
+		<button
+			onClick={() => pressToTalk()}
+			className={`translate-button ${
+				microphoneStatus ? 'translate-button-active' : ''
+			}`}
+		>
 			<i className="fas fa-microphone"></i>
 		</button>
 	);

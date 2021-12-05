@@ -48,6 +48,7 @@
 
 		&-active {
 			color: $info-color !important;
+			pointer-events: none;
 		}
 	}
 }

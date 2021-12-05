@@ -11,6 +11,7 @@ import { API_KEY, TRANSLATE_ENGINE, TRANSLATE_LANGUAGE } from './utils';
 function App() {
 	const [word, setWord] = useState('');
 	const [result, setResult] = useState('');
+	const [microphoneStatus, setMicrophoneStatus] = useState(false);
 
 	const translateWord = async (searchValue) => {
 		translate.engine = TRANSLATE_ENGINE;
@@ -32,6 +33,8 @@ function App() {
 						word={word}
 						setWord={setWord}
 						translateWord={translateWord}
+						microphoneStatus={microphoneStatus}
+						setMicrophoneStatus={setMicrophoneStatus}
 					/>
 					<TranslateWordResult result={result} />
 				</div>
