@@ -8,6 +8,14 @@ import TranslatedWord from './components/TranslatedWord';
 import TranslateWordResult from './components/TranslateWordResult';
 import { API_KEY, TRANSLATE_ENGINE, TRANSLATE_LANGUAGE } from './utils';
 
+// https://github.com/NikValdez/voiceTextTut/blob/master/src/App.js
+
+const SpeechRecognition =
+	window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.interimResults = true;
+
 function App() {
 	const [word, setWord] = useState('');
 	const [result, setResult] = useState('');
@@ -24,6 +32,27 @@ function App() {
 		}
 	};
 
+	const speechHandler = () => {
+		setMicrophoneStatus(true);
+
+		recognition.addEventListener('result', (e) => {
+			const text = Array.from(e.results)
+				.map((result) => result[0])
+				.map((result) => result.transcript)
+				.join('');
+
+			setWord(text);
+		});
+
+		recognition.start();
+
+		recognition.addEventListener('end', () => {
+			recognition.stop();
+
+			setMicrophoneStatus(false);
+		});
+	};
+
 	return (
 		<div className="App">
 			<div className="container">
@@ -35,6 +64,7 @@ function App() {
 						translateWord={translateWord}
 						microphoneStatus={microphoneStatus}
 						setMicrophoneStatus={setMicrophoneStatus}
+						speechHandler={speechHandler}
 					/>
 					<TranslateWordResult result={result} />
 				</div>

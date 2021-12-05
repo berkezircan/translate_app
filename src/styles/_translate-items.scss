@@ -49,6 +49,8 @@
 		&-active {
 			color: $info-color !important;
 			pointer-events: none;
+			cursor: pointer;
+			z-index: 999;
 		}
 	}
 }

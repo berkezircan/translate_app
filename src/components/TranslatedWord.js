@@ -10,6 +10,7 @@ const TranslatedWord = ({
 	translateWord,
 	microphoneStatus,
 	setMicrophoneStatus,
+	speechHandler,
 }) => {
 	const onWordChange = (event) => {
 		debounce(event.target.value);
@@ -34,6 +35,7 @@ const TranslatedWord = ({
 			<TranslateButton
 				microphoneStatus={microphoneStatus}
 				setMicrophoneStatus={setMicrophoneStatus}
+				speechHandler={speechHandler}
 			/>
 		</div>
 	);

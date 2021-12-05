@@ -1,13 +1,9 @@
 import React from 'react';
 
-const TranslateButton = ({ microphoneStatus, setMicrophoneStatus }) => {
-	const pressToTalk = () => {
-		setMicrophoneStatus(true);
-	};
-
+const TranslateButton = ({ microphoneStatus, speechHandler }) => {
 	return (
 		<button
-			onClick={() => pressToTalk()}
+			onClick={speechHandler}
 			className={`translate-button ${
 				microphoneStatus ? 'translate-button-active' : ''
 			}`}
