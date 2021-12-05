@@ -2,7 +2,7 @@ import React from 'react';
 
 import TranslateButton from './TranslateButton';
 
-const TranslatedWord = ({ word, setWord }) => {
+const TranslatedWord = ({ word, setWord, translateWord }) => {
 	const onWordChange = (e) => {
 		setWord(e.target.value);
 	};
@@ -13,8 +13,9 @@ const TranslatedWord = ({ word, setWord }) => {
 				placeholder="Translate Here"
 				className="translate-input translate-item"
 				onChange={(e) => onWordChange(e)}
+				value={word}
 			/>
-			<TranslateButton />
+			<TranslateButton translateWord={translateWord} />
 		</div>
 	);
 };

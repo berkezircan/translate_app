@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TranslateWordResult = () => {
+const TranslateWordResult = ({ result }) => {
 	return (
 		<div className="translate-item ">
-			Translate Word Result
+			{result !== '' ? result : 'Translate Word Result'}
 		</div>
 	);
 };

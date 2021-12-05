@@ -1,21 +1,26 @@
 import { useState } from 'react';
 import translate from 'translate';
+
 // Styles
 import './styles/App.scss';
 // Components
 import TranslatedWord from './components/TranslatedWord';
 import TranslateWordResult from './components/TranslateWordResult';
+import { API_KEY, TRANSLATE_ENGINE, TRANSLATE_LANGUAGE } from './utils';
 
 function App() {
 	const [word, setWord] = useState('');
-	const [translatedWord, setTranslatedWord] = useState('');
+	const [result, setResult] = useState('');
 
-	const translateWord = async (word) => {
-		translate.engine = 'google';
-		translate.key = 'AIzaSyD11ylXgBEAvMeaSYU1DFULsFZJmiRU1Dc';
+	const translateWord = async () => {
+		translate.engine = TRANSLATE_ENGINE;
+		translate.key = API_KEY;
 
-		const response = await translate('asdasd', 'tr');
-		console.log(1, response);
+		if (word !== '') {
+			const response = await translate(word, TRANSLATE_LANGUAGE);
+
+			setResult(response);
+		}
 	};
 
 	return (
@@ -23,8 +28,12 @@ function App() {
 			<div className="container">
 				<h1 className="display-1 title">Translate</h1>
 				<div className="translate-container">
-					<TranslatedWord word={word} setWord={setWord} />
-					<TranslateWordResult />
+					<TranslatedWord
+						word={word}
+						setWord={setWord}
+						translateWord={translateWord}
+					/>
+					<TranslateWordResult result={result} />
 				</div>
 			</div>
 		</div>
