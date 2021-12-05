@@ -1,6 +1,7 @@
 .translate {
 	&-container {
 		display: flex;
+		flex-direction: column;
 	}
 
 	&-area {
@@ -8,18 +9,19 @@
 	}
 
 	&-item {
-		width: 400px;
+		width: 500px;
 		background-color: $dark-color;
 		color: $light-color;
 		margin: 30px 20px 0 0;
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
+		min-height: 175px;
+		z-index: 999;
 	}
 
 	&-input {
 		resize: none;
-		min-height: 175px;
 		overflow: hidden;
 
 		&::placeholder {
@@ -43,7 +45,7 @@
 		float: right;
 		position: absolute;
 		bottom: 10px;
-		right: 30px;
+		left: 500px;
 
 		&-active {
 			color: $info-color !important;

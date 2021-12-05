@@ -1,0 +1,480 @@
+/*
+  I used a open source design on codepen. Because we all love open source :)
+  https://codepen.io/ochi/pen/apgxBd
+*/
+
+$space: #181b20;
+$white: #fffdff;
+$blue1: #1aadc9;
+$blue2: #1a8ca6;
+$blue3: #209db9;
+$grey1: #c3c3c3;
+$grey2: #d1d1d1;
+
+.ast-container {
+	width: 100%;
+	height: 1000px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.astronaut {
+	position: absolute;
+	top: 40%;
+	left: 80%;
+	transform: translateY(-50%) translateX(-50%);
+	height: 400px;
+	z-index: 10;
+	animation-duration: 3s;
+	animation-name: floating;
+	animation-iteration-count: infinite;
+
+	.helmet {
+		position: relative;
+		background-color: #fffdff;
+		height: 130px;
+		width: 140px;
+		border-radius: 100px 100px 85px 85px;
+		z-index: 2;
+
+		.visor {
+			background-color: #1aadc9;
+			height: 110px;
+			width: 120px;
+			border-radius: 100px 100px 90px 90px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			box-shadow: inset -20px -20px 0px 0px rgba(256, 256, 246, 0.2),
+				inset 0 -30px 0 0 #1a8ca6, inset 0 -60px 0 0 #209db9;
+		}
+
+		.left-lug {
+			width: 10px;
+			height: 20px;
+			background-color: #aba7aa;
+			position: absolute;
+			top: 45%;
+			left: -9px;
+			border-radius: 15px 0 0 15px;
+		}
+
+		.right-lug {
+			width: 10px;
+			height: 20px;
+			background-color: #aba7aa;
+			position: absolute;
+			top: 45%;
+			right: -9px;
+			border-radius: 0 15px 15px 0;
+		}
+	}
+	.neck {
+		width: 100px;
+		height: 30px;
+		background-color: #c3c3c3;
+		position: absolute;
+		top: 113px;
+		left: 20px;
+		border-radius: 0 0 100% 100%;
+		z-index: 1;
+	}
+
+	.body {
+		position: absolute;
+		top: 130px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 120px;
+		height: 160px;
+		background-color: #fffdff;
+
+		.left-arm {
+			background-color: #fffdff;
+			width: 35px;
+			height: 160px;
+			position: absolute;
+			left: -35px;
+			border-radius: 40px 0 0 40px;
+
+			.shadow {
+				background-color: rgba(0, 0, 0, 0.1);
+				width: 5px;
+				height: 110px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+
+			.hoop-1 {
+				position: absolute;
+				top: 55px;
+				right: 0;
+				width: 38px;
+				height: 6px;
+				background-color: $blue1;
+				border-radius: 5px 0 0 5px;
+			}
+
+			.hoop-2 {
+				position: absolute;
+				top: 70px;
+				right: 0;
+				width: 38px;
+				height: 6px;
+				background-color: $blue2;
+				border-radius: 5px 0 0 5px;
+			}
+		}
+
+		.right-arm {
+			background-color: #fffdff;
+			width: 35px;
+			height: 160px;
+			position: absolute;
+			right: -35px;
+			border-radius: 0 40px 40px 0;
+
+			.shadow {
+				background-color: rgba(0, 0, 0, 0.1);
+				width: 5px;
+				height: 110px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.hoop-1 {
+				position: absolute;
+				top: 55px;
+				left: 0;
+				width: 38px;
+				height: 6px;
+				background-color: $blue1;
+				border-radius: 0 5px 5px 0;
+			}
+
+			.hoop-2 {
+				position: absolute;
+				top: 70px;
+				left: 0;
+				width: 38px;
+				height: 6px;
+				background-color: $blue2;
+				border-radius: 0 5px 5px 0;
+			}
+		}
+
+		.chest-pack {
+			background-color: $grey2;
+			width: 65px;
+			height: 65px;
+			position: absolute;
+			top: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			.dot1 {
+				background-color: $white;
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+
+			.dot2 {
+				background-color: $white;
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				position: absolute;
+				top: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.dot3 {
+				background-color: $white;
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+
+			.lower-console {
+				background-color: $grey1;
+				width: 65px;
+				height: 37px;
+				position: absolute;
+				bottom: 0;
+
+				.box1 {
+					width: 17px;
+					height: 8px;
+					background-color: $white;
+					position: absolute;
+					top: 7px;
+					left: 10px;
+				}
+
+				.box2 {
+					width: 17px;
+					height: 8px;
+					background-color: $white;
+					position: absolute;
+					bottom: 7px;
+					left: 10px;
+				}
+
+				.box3 {
+					width: 20px;
+					height: 23px;
+					background-color: $white;
+					position: absolute;
+					bottom: 7px;
+					right: 10px;
+				}
+			}
+		}
+
+		.belt {
+			position: absolute;
+			top: 140px;
+			left: 0;
+			right: 0;
+			height: 10px;
+
+			.loop1 {
+				height: 100%;
+				width: 32px;
+				background-color: $grey1;
+				position: absolute;
+				left: 0;
+			}
+
+			.loop2 {
+				height: 100%;
+				width: 32px;
+				background-color: $grey1;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.loop3 {
+				height: 100%;
+				width: 32px;
+				background-color: $grey1;
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+
+	.backpack {
+		position: absolute;
+		top: 110px;
+		border-radius: 10px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 140px;
+		height: 140px;
+		background-color: rgba($grey1, 1);
+		z-index: -1;
+		box-shadow: inset 0 16px 0 0px $white;
+	}
+
+	.legs {
+		position: absolute;
+		top: 290px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 120px;
+		height: 100px;
+		background-color: $white;
+	}
+
+	.thigh-gap {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 6px;
+		height: 80px;
+		background-color: $space;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.left-knee {
+		position: absolute;
+		top: 40px;
+		left: 14px;
+		width: 30px;
+		height: 20px;
+		background-color: $grey2;
+		border-radius: 4px;
+
+		&:before,
+		&:after {
+			display: block;
+			content: '';
+			height: 4px;
+			position: absolute;
+			left: 3px;
+			right: 3px;
+			background-color: $grey1;
+			border-radius: 4px;
+		}
+
+		&:before {
+			top: 4px;
+		}
+
+		&:after {
+			bottom: 4px;
+		}
+	}
+
+	.right-knee {
+		position: absolute;
+		top: 40px;
+		right: 14px;
+		width: 30px;
+		height: 20px;
+		background-color: $grey2;
+		border-radius: 4px;
+
+		&:before,
+		&:after {
+			display: block;
+			content: '';
+			height: 4px;
+			position: absolute;
+			left: 3px;
+			right: 3px;
+			background-color: $grey1;
+			border-radius: 4px;
+		}
+
+		&:before {
+			top: 4px;
+		}
+
+		&:after {
+			bottom: 4px;
+		}
+	}
+
+	.left-foot {
+		position: absolute;
+		bottom: -10px;
+		left: -8px;
+		width: 65px;
+		height: 35px;
+		background-color: $white;
+		border-radius: 40px 40px 0 0;
+		border-bottom: 5px dashed $grey1;
+		box-shadow: 0 -4px 0px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.right-foot {
+		position: absolute;
+		bottom: -10px;
+		right: -8px;
+		width: 65px;
+		height: 35px;
+		background-color: $white;
+		border-radius: 40px 40px 0 0;
+		border-bottom: 5px dashed $grey1;
+		box-shadow: 0 -4px 0px 0px rgba(0, 0, 0, 0.1);
+	}
+}
+
+.planet2 {
+	position: absolute;
+	right: 5px;
+	top: 40px;
+	width: 160px;
+	height: 160px;
+	border-radius: 100%;
+	background-color: $blue1;
+	box-shadow: inset 4px 4px 0 0px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+
+	.dot1 {
+		position: absolute;
+		left: 25px;
+		top: 90px;
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		background-color: $blue2;
+	}
+
+	.dot2 {
+		position: absolute;
+		right: 30px;
+		top: 70px;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background-color: $blue2;
+	}
+
+	.dot3 {
+		position: absolute;
+		left: 55px;
+		top: 30px;
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		background-color: $blue2;
+	}
+
+	.dot4 {
+		position: absolute;
+		left: 95px;
+		bottom: 30px;
+		width: 26px;
+		height: 26px;
+		border-radius: 100%;
+		background-color: $blue2;
+	}
+
+	.dot5 {
+		position: absolute;
+		left: 70px;
+		bottom: 70px;
+		width: 22px;
+		height: 22px;
+		border-radius: 100%;
+		background-color: $blue2;
+	}
+}
+
+@keyframes floating {
+	from {
+		transform: translateY(-50%) translateX(-50%);
+	}
+	65% {
+		transform: translateY(-55%) translateX(-50%);
+	}
+	to {
+		transform: translateY(-50%) translateX(-50%);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.astronaut {
+		top: 90%;
+		left: 20%;
+	}
+}

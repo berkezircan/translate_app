@@ -1,11 +1,13 @@
 @import './reset';
 @import './variables';
+@import './astranaut';
 @import './translate-items';
 @import './utils.scss';
 
 body {
-	background-color: $muted-color;
+	background-color: $space-color;
 	font-family: $primary-font;
+	overflow: hidden;
 }
 
 .container {
@@ -17,4 +19,10 @@ body {
 .title {
 	margin-top: 20px;
 	color: $light-color;
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		overflow: scroll;
+	}
 }

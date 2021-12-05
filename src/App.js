@@ -6,6 +6,7 @@ import './styles/App.scss';
 import TranslatedWord from './components/TranslatedWord';
 import TranslateWordResult from './components/TranslateWordResult';
 import { API_KEY, TRANSLATE_ENGINE, TRANSLATE_LANGUAGE } from './utils';
+import Astronaut from './components/Astronaut';
 
 const SpeechRecognition =
 	window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -56,6 +57,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="container">
+				<Astronaut />
 				<h1 className="display-1 title">Translate</h1>
 				<div className="translate-container">
 					<TranslatedWord
