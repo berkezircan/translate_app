@@ -8,13 +8,12 @@ import TranslatedWord from './components/TranslatedWord';
 import TranslateWordResult from './components/TranslateWordResult';
 import { API_KEY, TRANSLATE_ENGINE, TRANSLATE_LANGUAGE } from './utils';
 
-// https://github.com/NikValdez/voiceTextTut/blob/master/src/App.js
-
 const SpeechRecognition =
 	window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
 recognition.interimResults = true;
+recognition.lang = 'en-US';
 
 function App() {
 	const [word, setWord] = useState('');
@@ -42,6 +41,8 @@ function App() {
 				.join('');
 
 			setWord(text);
+
+			translateWord(text);
 		});
 
 		recognition.start();
