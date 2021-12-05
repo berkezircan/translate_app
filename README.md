@@ -14,10 +14,26 @@ You will also see any lint errors in the console.
 
 ## About the application
 <ol>
-	<li><b>You can translate text directly if you write something.</b></li>
-	<li><b>If you want use microphone and translate, firstly you have to allow your microphone.</b></li>
-	<li><b>When you talk to the microphone, it translates and application turn offs the microphone.</b></li>
-	<li><b>If you get this error please use a vpn. Google translate api sends an error because of overload. If you use vpn problem solve</b></li>
+	<li>
+		<b>You can translate text directly if you write something.</b>
+		![1](https://user-images.githubusercontent.com/22801767/144762602-acb8397a-8bc8-430f-8dae-58ead4370088.png)
+
+	</li>
+	<li>
+		<b>If you want use microphone and translate, firstly you have to allow your microphone.</b>
+		![2](https://user-images.githubusercontent.com/22801767/144762608-065babc5-2e5f-4255-a873-8d8fcc407ee0.png)
+
+	</li>
+	<li>
+		<b>When you talk to the microphone, it translates and application turn offs the microphone.</b>
+		![3](https://user-images.githubusercontent.com/22801767/144762619-2671bb52-d1d1-41f4-b98b-774acb2ae855.png)
+
+	</li>
+	<li>
+		<b>If you get this error please use a vpn. Google translate api sends an error because of overload. If you use vpn problem solve</b>
+		![4](https://user-images.githubusercontent.com/22801767/144762622-69069cc8-7cbe-44a2-b458-ceb148298ee1.png)
+
+	</li>
 </ol>
 
 ## What libraries i used ?
